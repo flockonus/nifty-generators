@@ -2,9 +2,12 @@
   <%%= f.error_messages %>
 <%- for attribute in model_attributes -%>
   <p>
-    <%%= f.label :<%= attribute.name %> %><br />
-    <%%= f.<%= attribute.field_type %> :<%= attribute.name %> %>
+    <%%= f.label :<%= attribute.name %> %>
+    <% if attribute.type.to_s == 'string' %> <span class="limit_input"> ??/<%%= <%= class_name %>.columns_hash[ '<%= attribute.name %>' ].limit %> </span> <% end %><br />
+    <%%= f.<%= attribute.field_type %> :<%= attribute.name %><% if attribute.type.to_s == 'string' %>, :maxlength => <%= class_name %>.columns_hash[ '<%= attribute.name %>' ].limit.to_s  <% end %> %>
   </p>
 <%- end -%>
   <p><%%= f.submit %></p>
 <%% end %>
+
+<%%= javascript_include_tag 'edition_mod.js' %>

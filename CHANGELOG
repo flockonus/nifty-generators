@@ -1,3 +1,21 @@
+0.0.1 - 0.0.6 (January 17, 2011)
+
+* Made a JS counter based on the limit of the :string field.
+
+* Made the :string text_field be limited by a :maxlength
+
+* Some CSS changes+fixes
+
+
+
+
+
+
+=============================> FlockonUS /\
+
+
+
+
 0.4.4 (January 17, 2011)
 
 * adding namespaces to nifty:scaffold (thanks DouglasMeyer) - issue #63

@@ -42,10 +42,6 @@ a {
   border: solid 1px #C66;
 }
 
-.fieldWithErrors {
-  display: inline;
-}
-
 #errorExplanation {
   width: 400px;
   border: 2px solid #CF0000;
@@ -78,4 +74,24 @@ a {
 #errorExplanation ul li {
   font-size: 12px;
   list-style: disc;
+}
+
+/* Flockonus custom  :(*/
+
+.fieldWithErrors, .field_with_errors {
+  display: inline;
+  background-color: #F63;
+}
+
+.limit_input, .field_desc {
+  color: #AAA;
+  font-size: 11;
+}
+
+input[type="text"]{
+  width: 300px;
+}
+
+textarea{
+  width: 485px;
 }
