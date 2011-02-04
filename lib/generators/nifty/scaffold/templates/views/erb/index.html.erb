@@ -1,7 +1,7 @@
 <%% title "<%= plural_name.titleize %>" %>
 
 <%- if action? :new -%>
-<p><%%= link_to "Adicionar +", <%= item_path :action => :new %> %></p>
+<p><%%= link_to "Adicionar +", { :controller => controller.controller_name, :action => 'new' } %></p>
 <%- end -%>
 <table>
   <tr>
