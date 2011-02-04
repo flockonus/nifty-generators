@@ -1,7 +1,7 @@
-<%% title "New <%= singular_name.titleize %>" %>
+<%% title "Adicionar <%= singular_name.titleize %>" %>
 
 <%= render_form %>
 
 <%- if action? :index -%>
-<p><%%= link_to "Back to List", <%= items_path %> %></p>
+<p><%%= link_to "Listagem", <%= items_path %> %></p>
 <%- end -%>

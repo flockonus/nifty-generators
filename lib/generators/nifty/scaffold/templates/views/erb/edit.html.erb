@@ -1,14 +1,15 @@
-<%% title "Edit <%= singular_name.titleize %>" %>
-
-<%= render_form %>
-
+<%% title "<%= singular_name.titleize %> : Editando" %>
 <%- if actions? :show, :index -%>
 <p>
 <%- if action? :show -%>
-  <%%= link_to "Show", <%= item_path :instance_variable => true %> %> |
+  <%%= link_to "Exibir", <%= item_path :instance_variable => true %> %> |
 <%- end -%>
 <%- if action? :index -%>
-  <%%= link_to "View All", <%= items_path %> %>
+  <%%= link_to "Listagem", <%= items_path %> %>
 <%- end -%>
 </p>
 <%- end -%>
+
+<%= render_form %>
+
+

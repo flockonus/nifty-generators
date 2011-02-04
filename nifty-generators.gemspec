@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = "flockonus-nifty-generators"
-  s.version     = "0.0.6"
+  s.version     = "0.0.7"
   s.author      = "Fabiano PS"
   s.email       = "fabianosoriani@gmail.com"
   s.homepage    = "http://github.com/flockonus/nifty-generators"
