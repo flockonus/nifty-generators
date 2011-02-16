@@ -1,10 +1,10 @@
 Gem::Specification.new do |s|
   s.name        = "flockonus-nifty-generators"
-  s.version     = "0.0.8"
+  s.version     = "0.0.9"
   s.author      = "Fabiano PS"
   s.email       = "fabianosoriani@gmail.com"
   s.homepage    = "http://github.com/flockonus/nifty-generators"
-  s.summary     = "A collection of useful Rails generator scripts. Forked from ryanb"
+  s.summary     = "Rails 3 useful generator scripts. Forked from ryanb, Translated to PT-BR"
   s.description = "A collection of useful Rails generator scripts for scaffolding, layout files, authentication, and more."
 
   s.files        = Dir["{lib,test,features,rails_generators}/**/*", "[A-Z]*"]
