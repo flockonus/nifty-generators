@@ -19,13 +19,51 @@ a {
 }
 
 #container {
-  width: 75%;
+  width: 90%;
   margin: 0 auto;
   background-color: #FFF;
-  padding: 20px 40px;
+  padding: 20px 2% 60px 2%;
   border: solid 1px black;
   margin-top: 20px;
+  min-width:450px;
 }
+
+#menu-container {
+  overflow: hidden;
+  padding: 0 1% 20px;
+  /*padding: 0 20px 20px;*/
+  border: 1px solid #ccc;
+  /*background: #eee;*/
+  float:left;
+  width:22%;
+  min-width:150px;
+  
+}
+
+.menu-button {
+  margin-bottom:5px;
+  border: 1px solid #ccc;
+  border-bottom: 2px solid #ccc;
+  background-color:#fff;
+}
+
+.menu-button:hover {
+  border:1px solid #FF0000;
+  border-bottom: 2px solid #FF0000;
+}
+
+.selected {
+  border-bottom: 2px solid #00f;
+  border-left: 1px solid #00F;
+}
+
+#content-container {
+  float:left;
+  width:70%;
+  margin: 0 0 0 2%;
+  min-width:300px;
+}
+
 
 #flash_notice, #flash_error, #flash_alert {
   padding: 5px 8px;
@@ -40,6 +78,11 @@ a {
 #flash_error, #flash_alert {
   background-color: #FCC;
   border: solid 1px #C66;
+}
+
+.flash_box {
+  float:left;
+  width: 100%;
 }
 
 .error_messages {
@@ -72,13 +115,22 @@ a {
 
 /* Flockonus custom  1*/
 
+#logged_box{
+  position: absolute;
+  right: 5px;
+  top: 0;
+  padding: 1%;
+  background: white;
+  border: solid 1px black;
+}
+
 .fieldWithErrors, .field_with_errors {
   display: inline;
   background-color: #F63;
 }
 
 .limit_input, .field_desc {
-  color: #AAA;
+  color: #959595;
   font-size: 11;
 }
 
@@ -88,5 +140,32 @@ input[type="text"]{
 
 textarea{
   width: 485px;
+}
+
+td{
+  text-align: center;
+}
+
+.clear {
+  clear:both;
+}
+
+.hidden{
+  display: none;
+}
+
+.ingredient_box{
+  float: left;
+  width: 250px;
+  text-align: center;
+  height: 480px;
+}
+
+.combo_part{
+  height: 50px;
+  float: left;
+  padding: 0 10px;
+  border-right: 1px #000000 dashed;
+  border-top: 1px #000000 dashed;
 }
 
