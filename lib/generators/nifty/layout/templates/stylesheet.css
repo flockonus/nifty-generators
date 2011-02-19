@@ -113,7 +113,7 @@ a {
   margin: 0;
 }
 
-/* Flockonus custom  1*/
+/* Flockonus custom  v0.0.10 */
 
 #logged_box{
   position: absolute;
@@ -167,5 +167,9 @@ td{
   padding: 0 10px;
   border-right: 1px #000000 dashed;
   border-top: 1px #000000 dashed;
+}
+
+.data_table{
+  width: 100%;
 }
 

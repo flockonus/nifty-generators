@@ -14,7 +14,9 @@ module Nifty
         else
           template 'layout.html.erb', "app/views/layouts/#{file_name}.html.erb"
           copy_file 'stylesheet.css', "public/stylesheets/#{file_name}.css"
+          copy_file 'data_table.css', "public/stylesheets/data_table.css"
           copy_file 'char_limit_form.js', "public/javascripts/edition_mod.js"
+          copy_file 'jquery.dataTables.min.js', "public/javascripts/jquery.dataTables.min.js"
         end
         copy_file 'layout_helper.rb', 'app/helpers/layout_helper.rb'
         copy_file 'error_messages_helper.rb', 'app/helpers/error_messages_helper.rb'
