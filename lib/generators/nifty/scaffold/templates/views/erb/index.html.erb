@@ -3,28 +3,51 @@
 <%- if action? :new -%>
 <p><%%= link_to "Adicionar +", { :controller => controller.controller_name, :action => 'new' } %></p>
 <%- end -%>
-<table>
+<table class="data_table">
+  <thead>
   <tr>
   <%- for attribute in model_attributes -%>
     <th><%= attribute.human_name.titleize %></th>
   <%- end -%>
+    <th>Ações</th>
   </tr>
+  </thead>
+  <tbody>
   <%% for <%= instance_name %> in @<%= instances_name %> %>
     <tr>
     <%- for attribute in model_attributes -%>
       <td><%%= <%= instance_name %>.<%= attribute.name %> %></td>
     <%- end -%>
-    <%- if action? :show -%>
-      <td><%%= link_to "Exibir", <%= item_path %> %></td>
-    <%- end -%>
-    <%- if action? :edit -%>
-      <td><%%= link_to "Editar", <%= item_path :action => :edit %> %></td>
-    <%- end -%>
-    <%- if action? :destroy -%>
-      <td><%%= link_to "Excluir", <%= item_path %>, :confirm => 'Esta ação não tem volta, deseja prosseguir?', :method => :delete %></td>
-    <%- end -%>
+      <td>
+      <%- if action? :show -%>
+        <%%= link_to "Exibir", <%= item_path %> %>
+      <%- end -%>
+      <%- if action? :edit -%>
+        <%%= link_to "Editar", <%= item_path :action => :edit %> %>
+      <%- end -%>
+      <%- if action? :destroy -%>
+        <%%= link_to "Excluir", <%= item_path %>, :confirm => 'Esta ação não tem volta, deseja prosseguir?', :method => :delete %>
+      <%- end -%>
+      </td>
     </tr>
   <%% end %>
+  <tbody>
 </table>
 
+<%%= stylesheet_link_tag "data_table.css" %>
+<%%= javascript_include_tag 'jquery.dataTables.min.js' %>
 
+<script type="text/javascript" charset="utf-8">
+  j('table.data_table').dataTable({ // http://datatables.net/examples/basic_init/filter_only.html
+    "iDisplayLength": 50,
+    "bAutoWidth": true,
+    "oLanguage": {
+      "sLengthMenu": "_MENU_ entradas por página",
+      "sZeroRecords": "Vazio!",
+      "sInfo": "Exibindo de _START_ até _END_. Total de: _TOTAL_ entradas",
+      "sInfoEmpty": "Nenhuma entrada",
+      "sInfoFiltered": "(total de _MAX_ entradas)",
+      'sSearch' : "Busca"
+    }
+  });
+</script>
