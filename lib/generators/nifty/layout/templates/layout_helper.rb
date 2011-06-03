@@ -19,4 +19,9 @@ module LayoutHelper
   def javascript(*args)
     content_for(:head) { javascript_include_tag(*args) }
   end
+
+  def data_criacao_table ar
+    content_tag(:span, ar.created_at.to_i.to_s, :class => 'hidden') + 
+      " #{l(ar.created_at, :format => :short)}"
+  end
 end

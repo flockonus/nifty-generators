@@ -6,6 +6,7 @@
 <table class="data_table">
   <thead>
   <tr>
+    <th>Criação</th>
   <%- for attribute in model_attributes -%>
     <th><%= attribute.human_name.titleize %></th>
   <%- end -%>
@@ -15,15 +16,16 @@
   <tbody>
   <%% for <%= instance_name %> in @<%= instances_name %> %>
     <tr>
+      <td><%%= data_criacao_table <%= instance_name %> %></td> 
     <%- for attribute in model_attributes -%>
       <td><%%= <%= instance_name %>.<%= attribute.name %> %></td>
     <%- end -%>
       <td>
       <%- if action? :show -%>
-        <%%= link_to "Exibir", <%= item_path %> %>
+        <%%= link_to "Exibir", <%= item_path %> %> | 
       <%- end -%>
       <%- if action? :edit -%>
-        <%%= link_to "Editar", <%= item_path :action => :edit %> %>
+        <%%= link_to "Editar", <%= item_path :action => :edit %> %> | 
       <%- end -%>
       <%- if action? :destroy -%>
         <%%= link_to "Excluir", <%= item_path %>, :confirm => 'Esta ação não tem volta, deseja prosseguir?', :method => :delete %>

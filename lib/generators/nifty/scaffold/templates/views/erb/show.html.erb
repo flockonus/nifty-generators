@@ -12,7 +12,7 @@
   <%%= link_to "Editar", <%= item_path :action => :edit, :instance_variable => true %> %> |
 <%- end -%>
 <%- if action? :destroy -%>
-  <%%= link_to "Deletar", <%= item_path :instance_variable => true %>, :confirm => 'Are you sure?', :method => :delete %> |
+  <%%= link_to "Deletar", <%= item_path :instance_variable => true %>, :confirm => 'Excluir permanentemente?', :method => :delete %> |
 <%- end -%>
 <%- if action? :index -%>
   <%%= link_to "Listagem", <%= items_path %> %>

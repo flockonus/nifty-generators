@@ -1,3 +1,14 @@
+0.0.12
+
+* Minnor repair to edit.html.erb
+* commit
+
+
+0.0.11
+
+* Added a column to DataTables(pt-br) on the index, :created_at
+
+
 0.0.10
 
 * Made it proper to use DataTables(pt-br) on the index FTW
